@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Capsule : Shape
 {
-	private int edges;
-
-	public Capsule(string shapeName, Color shapeColor) : base(shapeName, shapeColor)
+	void Start()
 	{
+		ShapeName = "Capsule";
+		ShapeColor = Color.red;
+		GetComponent<MeshRenderer>().material.color = ShapeColor;
 	}
 
-	public int Edges { get; private set; }
+
 }

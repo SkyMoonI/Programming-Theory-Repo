@@ -5,21 +5,33 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
-	protected String shapeName;
-	protected Color shapeColor;
+	private String shapeName;
+	private Color shapeColor;
+	public String ShapeName
+	{
+		get
+		{ return shapeName; }
+		set
+		{ shapeName = value; }
+	}
+	public Color ShapeColor
+	{
+		get
+		{ return shapeColor; }
+		set
+		{ shapeColor = value; }
+	}
 
-	public Shape(String shapeName, Color shapeColor)
+
+	public virtual String DisplayText()
 	{
-		this.shapeName = shapeName;
-		this.shapeColor = shapeColor;
-	}
-	protected void DisplayText()
-	{
-		Debug.Log(shapeName + " is " + shapeColor);
+		Debug.Log(ShapeName + " Button Clicked");
+		Debug.Log("Shape Name with getter: " + ShapeName);
+		Debug.Log("Shape Color with getter: " + ShapeColor);
+
+		return ShapeName + " Button Clicked\n" +
+		"Shape Name with getter: " + ShapeName + "\n"
+		+ "Shape Color with getter: " + ShapeColor;
 	}
 
-	public virtual void DisplayColor()
-	{
-		Debug.Log(shapeName + " is " + shapeColor);
-	}
 }
