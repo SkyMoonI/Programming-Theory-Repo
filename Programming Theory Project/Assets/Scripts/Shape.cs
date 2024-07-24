@@ -7,6 +7,7 @@ public class Shape : MonoBehaviour
 {
 	private String shapeName;
 	private Color shapeColor;
+	// ENCAPSULATION
 	public String ShapeName
 	{
 		get
@@ -14,6 +15,7 @@ public class Shape : MonoBehaviour
 		set
 		{ shapeName = value; }
 	}
+	// ENCAPSULATION
 	public Color ShapeColor
 	{
 		get
@@ -22,7 +24,7 @@ public class Shape : MonoBehaviour
 		{ shapeColor = value; }
 	}
 
-
+	// ABSTRACTION
 	public virtual String DisplayText()
 	{
 		Debug.Log(ShapeName + " Button Clicked");

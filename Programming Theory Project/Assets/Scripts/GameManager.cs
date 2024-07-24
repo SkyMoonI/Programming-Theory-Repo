@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 		sphere = shapes[1].GetComponent<Sphere>();
 		capsule = shapes[2].GetComponent<Capsule>();
 	}
+
 	public void CubeButton()
 	{
 		shapeDetailsText.text = cube.DisplayText();

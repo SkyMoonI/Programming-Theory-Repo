@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+// INHERITANCE
 public class Capsule : Shape
 {
 	void Start()
